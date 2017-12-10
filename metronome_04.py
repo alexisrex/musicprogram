@@ -1,3 +1,4 @@
+
 import tkinter as tk
 import time
 
@@ -47,6 +48,23 @@ class Application(tk.Frame):
 
         self.pack()
         
+       
+
+        self.pack()
+
+        self.startbut = tk.Button(self)
+        self.startbut["text"] = "Start"
+        self.startbut["font"] = ('Helvetica', '40')
+        self.startbut["command"] = self.start
+        self.startbut.pack(side="right", ipadx=40, ipady=5, padx=10, pady=10)
+        self.startbut["bg"] = 'green'
+
+        self.stopbut = tk.Button(self)
+        self.stopbut["text"] = "Stop"
+        self.stopbut["font"] = ('Helvetica', '40')
+        self.stopbut.pack(side="left", ipadx=40, ipady=5, padx=10, pady=10)
+        self.stopbut["bg"] = 'green'
+       
         self.fasterbut = tk.Button(self)
         self.fasterbut["text"] = "+"
         self.fasterbut["font"] = ('Helvetica', '40')
@@ -61,16 +79,8 @@ class Application(tk.Frame):
         self.slowerbut.pack(side="left", ipadx=40, ipady=5, padx=40, pady=80)
         self.slowerbut["bg"] = 'orange'
 
-        self.startbut = tk.Button(self)
-        self.startbut["text"] = "Start"
-        self.startbut["font"] = ('Helvetica', '40')
-        self.startbut["command"] = self.start
-        self.startbut.pack(side="top", ipadx=40, ipady=5, padx=40, pady=80)
-        self.startbut["bg"] = 'green'
-       
-
     def say_hi(self):
-        print("hi there, everyone!")
+        print("metronome working")
         
     def start(self):
         global tempo
